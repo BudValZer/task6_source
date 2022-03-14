@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Checking variable') {
             steps {
-                sh 'echo $PASSWORD'
+                sh 'printenv'
             }
         }
     }
