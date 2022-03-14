@@ -8,7 +8,10 @@ pipeline {
                 PASSWORD = credentials('SECRET')
             }
             steps {
-                sh 'export PASSWORD="$PASSWORD"'
+                sh '''
+                    export PASSWORD="$PASSWORD"
+                    export TESTENV=blablabla
+                '''
             }
         }
         stage('Checking variable') {
