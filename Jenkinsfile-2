@@ -1,0 +1,20 @@
+pipeline {
+    agent {
+        dockerfile true
+    }
+    stages {
+        stage('Passing variable') {
+            environment {
+                PASSWORD = credentials('SECRET')
+            }
+            steps {
+                sh 'export PASSWORD="$PASSWORD"'
+            }
+        }
+        stage('Checking variable') {
+            steps {
+                sh 'echo $PASSWORD'
+            }
+        }
+    }
+}
