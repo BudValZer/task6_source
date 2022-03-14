@@ -1,1 +1,1 @@
-# task6_source
+# Source for exadel internship task 6
