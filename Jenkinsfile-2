@@ -11,7 +11,8 @@ pipeline {
                 sh '''
                     export PASSWORD="$PASSWORD"
                     export Not_Secret_PASSWORD=some_text
-                    printenv
+                    echo $PASSWORD
+                    echo $Not_Secret_PASSWORD
                 '''
             }
         }
