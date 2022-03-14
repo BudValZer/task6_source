@@ -11,12 +11,8 @@ pipeline {
                 sh '''
                     export PASSWORD="$PASSWORD"
                     export TESTENV=blablabla
+                    printenv
                 '''
-            }
-        }
-        stage('Checking variable') {
-            steps {
-                sh 'printenv'
             }
         }
     }
